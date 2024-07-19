@@ -1,0 +1,383 @@
+* 00000005
+*! version 1.0.0
+* Do not erase or edit this file
+* It is used by Stata to track the ado and help
+* files you have installed.
+
+S http://fmwww.bc.edu/repec/bocode/c
+N carryforward.pkg
+D 18 Jul 2024
+U 1
+d 'CARRYFORWARD': module to carry forward previous observations
+d 
+d  carryforward will carry values forward from one observation to
+d the next, filling in missing values with the previous value. This
+d is not intended for imputing missing values; it is regarded as a
+d bad choice for missing-value imputation. The intent is, rather,
+d to fill in "holes", where a value should  naturally prevail from
+d one observation to the next. The holes may be artifacts of data
+d management operations such as merging.
+d 
+d KW: carryforward
+d KW: carry
+d KW: forward
+d KW: missing
+d KW: fill
+d KW: replace
+d KW: cascade
+d 
+d Requires: Stata version 8.2
+d 
+d Distribution-Date: 20160212
+d 
+d Author: David Kantor
+d Support: email  kantor.d@@att.net
+d 
+f c/carryforward.ado
+f c/carryforward.hlp
+e
+S http://fmwww.bc.edu/repec/bocode/r
+N reghdfe.pkg
+D 18 Jul 2024
+U 2
+d 'REGHDFE': module to perform linear or instrumental-variable regression absorbing any number of high-dimensional fixed effects
+d 
+d  reghdfe fits a linear or instrumental-variable regression
+d absorbing an arbitrary number of categorical factors and
+d factorial interactions Optionally, it saves the estimated fixed
+d effects.
+d 
+d KW: regression
+d KW: instrumental variables
+d KW: fixed effects
+d KW: high dimension fixed effects
+d 
+d Requires: Stata version 11.2
+d 
+d Distribution-Date: 20230821
+d 
+d Author: Sergio Correia, Board of Governors of the Federal Reserve System
+d Support: email sergio.correia@@gmail.com
+d 
+f r/reghdfe.ado
+f r/reghdfe.mata
+f r/reghdfe3.ado
+f r/reghdfe_p.ado
+f r/reghdfe3_p.ado
+f r/reghdfe5.ado
+f r/reghdfe5_p.ado
+f r/reghdfe_estat.ado
+f r/reghdfe3_estat.ado
+f r/reghdfe5_estat.ado
+f r/reghdfe_parse.ado
+f r/reghdfe5_parse.ado
+f r/reghdfe_footnote.ado
+f r/reghdfe3_footnote.ado
+f r/reghdfe5_footnote.ado
+f e/estfe.ado
+f r/reghdfe_header.ado
+f r/reghdfe5_header.ado
+f r/reghdfe5_parse.ado
+f r/reghdfe.sthlp
+f r/reghdfe3.sthlp
+f r/reghdfe5.sthlp
+f r/reghdfe.mata
+f r/reghdfe_programming.sthlp
+e
+S http://fmwww.bc.edu/repec/bocode/m
+N moremata.pkg
+D 18 Jul 2024
+U 3
+d 'MOREMATA': module (Mata) to provide various functions
+d 
+d  This package includes various Mata functions. kern(): various
+d kernel functions; kint(): kernel integral functions; kdel0():
+d canonical bandwidth of kernel; quantile(): quantile function;
+d median(): median; iqrange(): inter-quartile range; ecdf():
+d cumulative distribution function; relrank(): grade
+d transformation; ranks(): ranks/cumulative frequencies; freq():
+d compute frequency counts; histogram(): produce histogram data;
+d mgof(): multinomial goodness-of-fit tests; collapse(): summary
+d statistics by subgroups; _collapse(): summary statistics by
+d subgroups; gini(): Gini coefficient; sample(): draw random
+d sample; srswr(): SRS with replacement; srswor(): SRS without
+d replacement; upswr(): UPS with replacement; upswor(): UPS without
+d replacement; bs(): bootstrap estimation; bs2(): bootstrap
+d estimation; bs_report(): report bootstrap results; jk():
+d jackknife estimation; jk_report(): report jackknife results;
+d subset(): obtain subsets, one at a time; composition(): obtain
+d compositions, one by one; ncompositions(): determine number of
+d compositions; partition(): obtain partitions, one at a time;
+d npartitionss(): determine number of partitions; rsubset(): draw
+d random subset; rcomposition(): draw random composition; greedy():
+d one-to-one and one-to-many matching; ebal(): entropy balancing
+d (Stata 11 required); colvar(): variance, by column; meancolvar():
+d mean and variance, by column; variance0(): population variance;
+d meanvariance0(): mean and population variance; mse(): mean
+d squared error; colmse(): mean squared error, by column; sse():
+d sum of squared errors; colsse(): sum of squared errors, by
+d column; benford(): Benford distribution; cauchy(): cumulative
+d Cauchy-Lorentz dist.; cauchyden(): Cauchy-Lorentz density;
+d cauchytail(): reverse cumulative Cauchy-Lorentz; invcauchy():
+d inverse cumulative Cauchy-Lorentz; rbinomial(): generate binomial
+d random numbers; cebinomial(): cond. expect. of binomial r.v.;
+d root(): Brent's univariate zero finder; nrroot(): Newton-Raphson
+d zero finder; finvert(): univariate function inverter;
+d integrate_sr(): univariate function integration (Simpson's rule);
+d integrate_38(): univariate function integration (Simpson's 3/8
+d rule); ipolate(): linear interpolation; polint(): polynomial
+d inter-/extrapolation; sqrt(): square root of a symmetric positive
+d definite matrix; plot(): Draw twoway plot; _plot(): Draw twoway
+d plot; panels(): identify nested panel structure; _panels():
+d identify panel sizes; npanels(): identify number of panels;
+d nunique(): count number of distinct values; nuniqrows(): count
+d number of unique rows; isconstant(): whether matrix is constant;
+d nobs(): number of observations; colrunsum(): running sum of each
+d column; linbin(): linear binning; fastlinbin(): fast linear
+d binning; exactbin(): exact binning; makegrid(): equally spaced
+d grid points; cut(): categorize data vector; posof(): find element
+d in vector; which(): positions of nonzero elements; locate():
+d search an ordered vector; hunt(): consecutive search; cond():
+d matrix conditional operator; expand(): duplicate single
+d rows/columns; _expand(): duplicate rows/columns in place;
+d repeat(): duplicate contents as a whole; _repeat(): duplicate
+d contents in place; unorder2(): stable version of unorder();
+d jumble2(): stable version of jumble(); _jumble2(): stable version
+d of _jumble(); pieces(): break string into pieces; npieces():
+d count number of pieces; _npieces(): count number of pieces;
+d regexr(): regular expression replace; invtokens(): reverse of
+d tokens(); realofstr(): convert string into real; strexpand():
+d expand string argument; matlist(): display a (real) matrix;
+d insheet(): read spreadsheet file; infile(): read free-format
+d file; outsheet(): write spreadsheet file; callf(): pass optional
+d args to function; callf_setup(): setup for mm_callf().
+d 
+d KW: Mata
+d KW:  quantile
+d KW: median
+d KW: inter-quartile range
+d KW: integration
+d KW: cumulative distribution
+d KW: Cauchy distribution
+d KW: Cauchy-Lorentz distribution
+d KW: relative ranks
+d KW: running sum
+d KW: linear interpolation
+d KW: insheet
+d KW: infile
+d KW: outsheet
+d KW: spreadsheet
+d KW: tokens
+d KW: rowvector
+d KW: string
+d KW: real
+d KW: grid
+d KW: linear binning
+d KW: histogram
+d 
+d Requires: Stata version 11
+d 
+d Distribution-Date: 20221124
+d 
+d Author: Ben Jann, University of Bern
+d Support: email jann@@soz.unibe.ch
+d 
+f l/lmoremata.mlib
+f l/lmoremata10.mlib
+f l/lmoremata11.mlib
+f l/lmoremata14.mlib
+f m/mf_mm_sample.hlp
+f m/moremata.hlp
+f m/moremata_source.hlp
+f m/moremata10_source.hlp
+f m/moremata11_source.hlp
+f m/moremata14_source.hlp
+f m/mf_mm_unorder2.hlp
+f m/mf_mm_panels.hlp
+f m/mf_mm_quantile.hlp
+f m/mf_mm_strexpand.hlp
+f m/mf_mm_realofstr.hlp
+f m/mf_mm_posof.hlp
+f m/mf_mm_ipolate.hlp
+f m/mf_mm_invtokens.hlp
+f m/mf_mm_linbin.hlp
+f m/mf_mm_histogram.hlp
+f m/mf_mm_ecdf.hlp
+f m/mf_mm_colrunsum.hlp
+f m/mf_mm_rbinomial.hlp
+f m/mf_mm_insheet.hlp
+f m/mf_mm_cut.hlp
+f m/mf_mm_freq.hlp
+f m/mf_mm_colvar.hlp
+f m/mf_mm_gini.hlp
+f m/mf_mm_nunique.hlp
+f m/mf_mm_bs.hlp
+f m/mf_mm_callf.hlp
+f m/mf_mm_expand.hlp
+f m/mf_mm_finvert.hlp
+f m/mf_mm_greedy.hlp
+f m/mf_mm_jk.hlp
+f m/mf_mm_kern.hlp
+f m/mf_mm_locate.hlp
+f m/mf_mm_nobs.hlp
+f m/mf_mm_nrroot.hlp
+f m/mf_mm_polint.hlp
+f m/mf_mm_root.hlp
+f m/mf_mm_which.hlp
+f m/mf_mm_plot.hlp
+f m/mf_mm_pieces.hlp
+f m/mf_mm_benford.hlp
+f m/mf_mm_isconstant.hlp
+f m/mf_mm_mgof.hlp
+f m/mf_mm_subset.hlp
+f m/mf_mm_cauchy.hlp
+f m/mf_mm_matlist.hlp
+f m/mf_mm_cond.hlp
+f m/mf_mm_collapse.hlp
+f m/mf_mm_integrate.hlp
+f m/mf_mm_regexr.hlp
+f m/mf_mm_sqrt.hlp
+f m/mf_mm_ebal.sthlp
+f m/mf_mm_clip.hlp
+f m/mf_mm_ddens.hlp
+f m/mf_mm_density.sthlp
+f m/mf_mm_diff.hlp
+f m/mf_mm_group.hlp
+f m/mf_mm_minim.hlp
+f m/mf_mm_prod.hlp
+f m/mf_mm_ranks.hlp
+f m/mf_mm_relrank.hlp
+f m/mf_mm_seq.hlp
+f m/mf_mm_sort.hlp
+f m/mf_mm_hl.hlp
+f m/mf_mm_mloc.hlp
+f m/mf_mm_ls.hlp
+f m/mf_mm_qr.sthlp
+f m/mf_mm_areg.hlp
+f m/mf_mm_aqreg.hlp
+f m/mf_mm_hdq.hlp
+f m/mf_mm_version.hlp
+f m/mf_mm_ebalance.sthlp
+f m/mf_mm_wbal.sthlp
+f m/mf_mm_crosswalk.sthlp
+e
+S http://fmwww.bc.edu/repec/bocode/f
+N ftools.pkg
+D 18 Jul 2024
+U 4
+d 'FTOOLS': module to provide alternatives to common Stata commands optimized for large datasets
+d 
+d  ftools consists of a Mata file and several Stata commands: The
+d Mata file creates identifiers (factors) from variables by using
+d hash functions instead of sorting the data, so it runs in time
+d O(N) and not in O(N log N). The Stata commands exploit this to
+d avoid sort operations,  at the cost of being slower for small
+d datasets (mainly because of the cost involved in moving data from
+d Stata to Mata). Implemented commands are fcollapse, fegen group,
+d and fsort. Note that most of the capabilities of levels and
+d contract are already supported by these commands. Possible
+d commands include more egen functions and merge and reshape
+d alternatives.
+d 
+d KW: levels
+d KW: collapse
+d KW: contract
+d KW: egen
+d KW: sort
+d KW: factor variables
+d KW: Mata
+d 
+d Requires: Stata version 11.2
+d 
+d Distribution-Date: 20230821
+d 
+d Author: Sergio Correia, Board of Governors of the Federal Reserve System
+d Support: email sergio.correia@@gmail.com
+d 
+f f/ftools.ado
+f f/ftools.mata
+f f/ftools.sthlp
+f f/fcollapse.ado
+f f/fcollapse.sthlp
+f f/fegen.ado
+f f/fegen_group.ado
+f f/fegen.sthlp
+f f/fisid.ado
+f f/fisid.sthlp
+f f/flevelsof.ado
+f f/flevelsof.sthlp
+f f/fmerge.ado
+f f/fmerge.sthlp
+f f/freshape.ado
+f f/fsort.ado
+f f/fsort.sthlp
+f f/ftab.ado
+f j/join.ado
+f j/join.sthlp
+f l/local_inlist.ado
+f l/local_inlist.sthlp
+f f/fcollapse_functions.mata
+f f/fcollapse_main.mata
+f f/ftools_type_aliases.mata
+f f/ftools.mata
+f f/ftools_common.mata
+f f/ftools_hash1.mata
+f f/ftools_main.mata
+f f/ftools_experimental.mata
+f f/ftools_plugin.mata
+f f/ftools_type_aliases.mata
+f m/ms_compile_mata.ado
+f m/ms_expand_varlist.ado
+f m/ms_fvstrip.ado
+f m/ms_fvstrip.sthlp
+f m/ms_fvunab.ado
+f m/ms_get_version.ado
+f m/ms_parse_absvars.ado
+f m/ms_parse_varlist.ado
+f m/ms_parse_vce.ado
+f m/ms_add_comma.ado
+e
+S http://www.stata-journal.com/software/sj17-3
+N gr0070.pkg
+D 19 Jul 2024
+U 5
+d SJ17-3 gr0070. Provide graph schemes sensitive to color vision deficiency
+d Provide graph schemes sensitive to color vision
+d   deficiency
+d by Daniel Bischof, Department of Political
+d      Science, University of Zurich, Zurich,
+d      Switzerland
+d Support:  bischof@@ipz.uzh.ch
+d After installation, type help ^plotplain^,
+d   ^plotplainblind^, ^plottig^, and
+d   ^plottigblind^
+f style/color-ananas.style
+f style/color-orangebrown.style
+f style/color-plb1.style
+f style/color-plb2.style
+f style/color-plb3.style
+f style/color-plg1.style
+f style/color-plg2.style
+f style/color-plg3.style
+f style/color-pll1.style
+f style/color-pll2.style
+f style/color-pll3.style
+f style/color-plr1.style
+f style/color-plr2.style
+f style/color-ply1.style
+f style/color-ply2.style
+f style/color-ply3.style
+f style/color-reddish.style
+f style/color-sea.style
+f style/color-sky.style
+f style/color-turquoise.style
+f style/color-vermillion.style
+f s/scheme-plotplainblind.scheme
+f s/scheme_plotplainblind.sthlp
+f s/scheme-plotplain.scheme
+f s/scheme_plotplain.sthlp
+f s/scheme-plottigblind.scheme
+f s/scheme_plottigblind.sthlp
+f s/scheme-plottig.scheme
+f s/scheme_plottig.sthlp
+e
